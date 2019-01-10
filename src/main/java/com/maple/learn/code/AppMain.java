@@ -6,7 +6,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AppMain {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        HelloWorldService helloWorldService = (HelloWorldService) applicationContext.getBean("helloWorldService");
+        System.err.println("===============================================");
+        HelloWorldService helloWorldService =  applicationContext.getBean("helloWorldService",HelloWorldService.class);
         helloWorldService.sayHello();
+
+        PeopleService peopleService =  applicationContext.getBean("peopleService",PeopleService.class);
+        peopleService.say();
+
     }
 }

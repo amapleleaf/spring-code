@@ -5,7 +5,12 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-    <bean id="helloWorldService" class="com.maple.learn.code.HelloWorldService">
+    <bean id="helloWorldService" class="com.maple.learn.code.HelloWorldService" init-method="initMethod">
+
         <property name="name" value="Jerry" />
     </bean>
+    <bean id="peopleService" class="com.maple.learn.code.PeopleService" >
+        <!--<property name="content" value="i am sick" />-->
+    </bean>
+
 </beans>
