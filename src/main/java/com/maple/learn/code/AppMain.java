@@ -12,6 +12,5 @@ public class AppMain {
 
         PeopleService peopleService =  applicationContext.getBean("peopleService",PeopleService.class);
         peopleService.say();
-
     }
 }
